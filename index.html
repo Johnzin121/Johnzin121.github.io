@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tia Van Lanches</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f8fa;
+    }
+
+    .navbar {
+      background-color: #1E90FF;
+    }
+
+    .navbar-item {
+      font-weight: 600;
+      color: white !important;
+    }
+
+    .navbar-item:hover {
+      color: #ff6347 !important;
+    }
+
+    .category-box {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .category-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .category-box .icon {
+      color: #FF6347;
+      transition: transform 0.3s ease;
+    }
+
+    .category-box:hover .icon {
+      transform: rotate(15deg);
+    }
+
+    .category-label {
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .product-card {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .product-image {
+      width: 90px;
+      height: 90px;
+      background-color: #ccc;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-right: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .product-price {
+      font-weight: bold;
+      color: #28a745;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .product-action {
+      margin-left: auto;
+    }
+
+    .button.is-success {
+      background-color: #ff6347;
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.8rem 1.5rem;
+    }
+
+    .button.is-success:hover {
+      background-color: #ff4500;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .product-action {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+
+      .columns.is-mobile.is-multiline {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-white has-text-weight-bold is-size-5" id="empresaNome">TIA VAN LANCHES</a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a href="carrinho.html" class="icon has-text-white">
+          <i class="fas fa-cart-shopping fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Categorias -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-mobile is-multiline is-centered" id="categorias">
+        <!-- Categorias carregadas via fetch -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Mais Vendidos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-5 has-text-centered">MAIS VENDIDOS</h2>
+      <div class="columns is-mobile is-multiline" id="maisVendidos">
+        <!-- Produtos carregados via fetch -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Script que consome o JSON -->
+  <script>
+    fetch('api.json')
+      .then(response => response.json())
+      .then(data => {
+        // Atualiza o nome da empresa
+        document.getElementById('empresaNome').textContent = data.empresa;
+
+        // Renderiza categorias
+        const categoriasEl = document.getElementById('categorias');
+        data.categorias.forEach(cat => {
+          const div = document.createElement('div');
+          div.className = 'column is-6-mobile is-3-tablet';
+          div.innerHTML = `
+            <div class="category-box">
+              <span class="icon is-large">
+                <i class="${cat.icone} fa-3x"></i>
+              </span>
+              <div class="category-label">${cat.nome}</div>
+            </div>
+          `;
+          categoriasEl.appendChild(div);
+        });
+
+        // Renderiza produtos mais vendidos
+        const vendidosEl = document.getElementById('maisVendidos');
+        data.maisVendidos.forEach(prod => {
+          const div = document.createElement('div');
+          div.className = 'column is-6';
+          div.innerHTML = `
+            <div class="product-card">
+              <div class="product-image" style="background-image: url('${prod.imagem || 'https://via.placeholder.com/90'}')"></div>
+              <div class="product-info">
+                <div class="product-price">R$${prod.preco.toFixed(2)}</div>
+                <div class="has-text-weight-semibold">${prod.nome}</div>
+              </div>
+              <div class="product-action">
+                <button class="button is-success" onclick="adicionarItem(${prod.id})">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          `;
+          vendidosEl.appendChild(div);
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao carregar dados da API:', error);
+      });
+
+    // Exemplo de função para adicionar ao carrinho
+    function adicionarItem(id) {
+      alert(`Produto com ID ${id} adicionado ao carrinho!`);
+    }
+  </script>
+
+  <script src="js/controllers.js"></script>
+</body>
+</html>

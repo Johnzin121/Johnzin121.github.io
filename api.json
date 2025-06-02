@@ -1,0 +1,57 @@
+{
+    "empresa": "Tia Van Lanches",
+    "categorias": [
+      {
+        "nome": "Salgados",
+        "icone": "fas fa-bread-slice"
+      },
+      {
+        "nome": "Bebidas",
+        "icone": "fas fa-mug-saucer"
+      },
+      {
+        "nome": "Bolo de pote",
+        "icone": "fas fa-ice-cream"
+      },
+      {
+        "nome": "Trufas",
+        "icone": "fas fa-candy-cane"
+      }
+    ],
+    "maisVendidos": [
+      {
+        "id": 2,
+        "nome": "Croissant de Bacon com Queijo",
+        "preco": 7.5,
+        "imagem": "croissant-8996467_1280.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Bolo de pote de Limão",
+        "preco": 14.0,
+        "imagem": "img/bolo-limao.jpg"
+      },
+      {
+        "id": 5,
+        "nome": "Croissant de Presunto e Queijo",
+        "preco": 9.0,
+        "imagem": "img/croissant-presunto.jpg"
+      },
+      {
+        "id": 6,
+        "nome": "Trufa de Chocolate Branco",
+        "preco": 5.5,
+        "imagem": "img/trufa-branca.jpg"
+      }, {
+        
+            "id": 9,
+            "nome": "Refrigerante Lata 350ml",
+            "preco": 4.50,
+            "imagem": "img/refrigerante.jpg"
+          
+      }
+
+      
+    ]
+  }
+  
