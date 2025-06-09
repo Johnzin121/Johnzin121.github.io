@@ -1,0 +1,165 @@
+{
+    "Livros": {
+      "Ficcao": [
+        {
+          "titulo": "1984",
+          "autor": "George Orwell",
+          "ano": 1949
+        },
+        {
+          "titulo": "O Senhor dos Anéis",
+          "autor": "J.R.R. Tolkien",
+          "ano": 1954
+        },
+        {
+          "titulo": "Duna",
+          "autor": "Frank Herbert",
+          "ano": 1965
+        },
+        {
+          "titulo": "Neuromancer",
+          "autor": "William Gibson",
+          "ano": 1984
+        },
+        {
+          "titulo": "Fundação",
+          "autor": "Isaac Asimov",
+          "ano": 1951
+        },
+        {
+          "titulo": "O Conto da Aia",
+          "autor": "Margaret Atwood",
+          "ano": 1985
+        }
+      ],
+      "NaoFiccao": [
+        {
+          "titulo": "Sapiens",
+          "autor": "Yuval Noah Harari",
+          "ano": 2011
+        },
+        {
+          "titulo": "O Gene",
+          "autor": "Siddhartha Mukherjee",
+          "ano": 2016
+        },
+        {
+          "titulo": "A Breve História de Quase Tudo",
+          "autor": "Bill Bryson",
+          "ano": 2003
+        },
+        {
+          "titulo": "O Poder do Hábito",
+          "autor": "Charles Duhigg",
+          "ano": 2012
+        },
+        {
+          "titulo": "Como as Democracias Morrem",
+          "autor": "Steven Levitsky",
+          "ano": 2018
+        },
+        {
+          "titulo": "Mindset",
+          "autor": "Carol S. Dweck",
+          "ano": 2006
+        }
+      ],
+      "Biografias": [
+        {
+          "titulo": "Steve Jobs",
+          "autor": "Walter Isaacson",
+          "ano": 2011
+        },
+        {
+          "titulo": "A Luta de Martin Luther King",
+          "autor": "David J. Garrow",
+          "ano": 1986
+        },
+        {
+          "titulo": "Eu Sou Malala",
+          "autor": "Malala Yousafzai",
+          "ano": 2013
+        },
+        {
+          "titulo": "Leonardo da Vinci",
+          "autor": "Walter Isaacson",
+          "ano": 2017
+        },
+        {
+          "titulo": "Churchill: Uma Vida",
+          "autor": "Martin Gilbert",
+          "ano": 1991
+        },
+        {
+          "titulo": "Longa Caminhada até a Liberdade",
+          "autor": "Nelson Mandela",
+          "ano": 1994
+        }
+      ],
+      "AutoAjuda": [
+        {
+          "titulo": "Os 7 Hábitos das Pessoas Altamente Eficazes",
+          "autor": "Stephen Covey",
+          "ano": 1989
+        },
+        {
+          "titulo": "Como Fazer Amigos e Influenciar Pessoas",
+          "autor": "Dale Carnegie",
+          "ano": 1936
+        },
+        {
+          "titulo": "O Milagre da Manhã",
+          "autor": "Hal Elrod",
+          "ano": 2012
+        },
+        {
+          "titulo": "Quem Pensa Enriquece",
+          "autor": "Napoleon Hill",
+          "ano": 1937
+        },
+        {
+          "titulo": "A Sutil Arte de Ligar o F*da-se",
+          "autor": "Mark Manson",
+          "ano": 2016
+        },
+        {
+          "titulo": "O Poder do Agora",
+          "autor": "Eckhart Tolle",
+          "ano": 1997
+        }
+      ],
+      "Tecnologia": [
+        {
+          "titulo": "Clean Code",
+          "autor": "Robert C. Martin",
+          "ano": 2008
+        },
+        {
+          "titulo": "O Programador Pragmático",
+          "autor": "Andrew Hunt e David Thomas",
+          "ano": 1999
+        },
+        {
+          "titulo": "Design Patterns",
+          "autor": "Erich Gamma e outros",
+          "ano": 1994
+        },
+        {
+          "titulo": "Inteligência Artificial: Estruturas e Estratégias",
+          "autor": "George Luger",
+          "ano": 2005
+        },
+        {
+          "titulo": "Código Limpo",
+          "autor": "Robert C. Martin",
+          "ano": 2011
+        },
+        {
+          "titulo": "Python para Análise de Dados",
+          "autor": "Wes McKinney",
+          "ano": 2017
+        }
+      ]
+    }
+  }
+  
